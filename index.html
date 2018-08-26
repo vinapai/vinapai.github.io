@@ -27,13 +27,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container">
   <h1>My First Bootstrap Page</h1>
   <p>This is some text.</p> 
-<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-success" onclick="searchList()">Success</button>
 
 <a class="myclass" href="http://www.google.com">Click here</a>
 
 </div>
 
-
+<script>
+	function searchList() {
+		alert('searchList function called...');
+		window.searchXHR.abort();
+        window.searchXHR.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+			}
+		}
+		window.searchXHR.open("GET", "https://vinapai.github.io?searchTerm=abcd", true);
+        window.searchXHR.send()
+	}
+</script>
 
 
 </body>
