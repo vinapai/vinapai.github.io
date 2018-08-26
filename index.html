@@ -41,6 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.searchXHR.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
 				console.log('successfully called...')
+				ga('send', 'pageview', 'search.php?searchTerm=abcd');
 			}
 		}
 		window.searchXHR.open("GET", "https://vinapai.github.io?searchTerm=abcd", true);
