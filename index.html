@@ -36,6 +36,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 	function searchList() {
 		alert('searchList function called...');
+		window.searchXHR = new XMLHttpRequest;
 		window.searchXHR.abort();
         window.searchXHR.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
